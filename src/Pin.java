@@ -1,5 +1,6 @@
 /**
- * Pin.java - For easier coding,
+ * Pin.java - For easier coding and readability, I chose to rename the default Pi4J Pin names to something more
+ * meaningful for the project.
  *
  * @author Andrew McGuiness
  * @version 11/3/2017
