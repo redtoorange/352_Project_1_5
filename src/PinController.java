@@ -30,11 +30,11 @@ public class PinController {
 		input1 = gpio.provisionDigitalOutputPin(
 				RaspiPin.GPIO_02,
 				null,
-				PinState.HIGH);
+				PinState.LOW);
 		input2 = gpio.provisionDigitalOutputPin(
 				RaspiPin.GPIO_03,
 				null,
-				PinState.HIGH);
+				PinState.LOW);
 		input3 = gpio.provisionDigitalOutputPin(
 				RaspiPin.GPIO_12,
 				null,
@@ -93,15 +93,21 @@ public class PinController {
 
 
 	public ItemListener getPinListener( final Pin pin ){
-		return (e)-> {
+		return new ItemListener() {
+
+			@Override
+			public void itemStateChanged(ItemEvent e) {
 				if(e.getStateChange() == ItemEvent.SELECTED){
 					setPinState(pin, PinState.HIGH);
 				}
 				else{
 					setPinState(pin, PinState.LOW );
 				}
-
+				
+			}
+			
 		};
+
 	}
 
 

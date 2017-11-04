@@ -31,8 +31,8 @@ public class MainView extends JFrame {
 
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(300, 300);
-        frame.pack();
+        frame.setSize(225, 225);
+  
         frame.setVisible(true);
     }
 
@@ -45,9 +45,13 @@ public class MainView extends JFrame {
 
         //Input Selectors
         GridBagConstraints c = new GridBagConstraints();
+        c.ipadx = 25;
+        c.ipady = 10;
         c.gridx = 0;
         c.gridy = 0;
-        mainPanel.add(new JLabel("Input Selectors"), c);
+        JLabel label = new JLabel("Input Selectors");
+//        label.setMinimumSize(new Dimension(300, 25));
+        mainPanel.add(label, c);
 
         c.gridy = 1;
         mainPanel.add(selectACheck, c);
@@ -60,6 +64,8 @@ public class MainView extends JFrame {
         GridBagConstraints c = new GridBagConstraints();
         c.gridx = 1;
         c.gridy = 0;
+        c.ipadx = 25;
+        c.ipady = 10;
         mainPanel.add(new JLabel("Input Pins"), c);
 
         JCheckBox in0Check = new JCheckBox("Input 0");
