@@ -1,5 +1,5 @@
 /**
- * Pin.java - Description
+ * Pin.java - For easier coding,
  *
  * @author Andrew McGuiness
  * @version 11/3/2017
